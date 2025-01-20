@@ -1,0 +1,64 @@
+﻿__________________________________________________________________________________________
+
+  SENSIA SOLUTIONS®							CALIBRATION FILE
+                                                          		
+__________________________________________________________________________________________
+
+  [Product Information]
+
+			Serial Number: SEN.H23.02.01.55.020.016
+			Detector: HPD7719636
+			Calibration Date: 09042024
+__________________________________________________________________________________________
+
+  [Camera Configuration]
+
+			Lens: SEN.OPT23.M35.01.30
+			Filter: N/A
+			Spectral Band: 3.19 - 3.46 µm
+            	TBNUC: N/A
+__________________________________________________________________________________________
+
+  [Calibration Temperature Range]
+
+			Temperature Range (ºC) = N/A
+__________________________________________________________________________________________
+
+  [Sensor Init Control Parameters]
+
+			GFID = N/A
+			GSK = N/A
+			Gain = N/A
+			Tint = 33100
+__________________________________________________________________________________________
+
+  [Detector Compensation Parameters] 
+
+			[DACB: A2*(Bolometer Level)^2 + A1*(Bolometer Level) + A0]
+			A2 = 0
+			A1 = 0
+			A0 = 0
+__________________________________________________________________________________________
+
+  [Image Compensation Parameters]
+
+			[Digital Level': B1*(Digital Level) + B0]
+			[B1: b12*(Bolometer Level)^2 + b11*(Bolometer Level) + b10]
+			[B0: b02*(Bolometer Level)^2 + b01*(Bolometer Level) + b00]
+			b12 = 0
+			b11 = 0
+			b10 = 1
+			b02 = 0
+			b01 = 0
+			b00 = 0
+__________________________________________________________________________________________
+
+  [Temperature Calibration Parameters]
+
+			[Radiance: C1*(Digital Level') + C0]
+			C1 = 9.773400613303313e-06
+			C0 = -0.02148173561245238
+			
+			Emissivity = 1
+__________________________________________________________________________________________
+
