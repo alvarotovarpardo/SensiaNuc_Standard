@@ -11,35 +11,14 @@ int main()
 
     m_pNuc = new SENSIANuc(configName, height, width, bytes, sDir);
 
-    m_pNuc -> setGainForcingNucValue(2750);
-    m_pNuc -> setOffsetForcingNucValue(0, 2750);
-
     m_pNuc -> cleanAll();
-    cv::Mat Gain = m_pNuc -> getGain();
+
     cv::Mat Offset = m_pNuc -> getOffset();
+    m_pNuc -> setGainForcingNucValue(2750);
+    cv::Mat Gain = m_pNuc -> getGain();
 
-    const float* dataGain = Gain.ptr<float>();
-    std::cout << "Gain:\n\n";
-    for (int i = 0; i < 50; ++i) {
-        std::cout << static_cast<float>(dataGain[i]) << " ";
-    }
-    std::cout << "\n\n\n";
+    m_pNuc -> saveImageMBP("", 666);
 
-    std::cout << "Offset:\n\n";
-    const float* dataOffset = Offset.ptr<float>();
-    for (int i = 0; i < 50; ++i) {
-        std::cout << static_cast<float>(dataOffset[i]) << " ";
-    }
-
-    cv::Mat seeGain;
-    Gain.convertTo(seeGain, CV_8U, 255.0);
-    cv::imshow("Gain", seeGain);
-
-
-    cv::Mat seeOffset;
-    Offset.convertTo(seeOffset, CV_8U, 255.0);
-    cv::imshow("Offset", seeOffset);
-    cv::waitKey(0);
 
     return 0;
 }
