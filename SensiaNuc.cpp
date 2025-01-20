@@ -6,7 +6,7 @@
 //// \param height Camera height
 //// \param width Camera width
 //// \param sDir Test directory in the case of Analytics software. Leave empty otherwise.
-SENSIANuc::SENSIANuc(std::string &sConfigName, const int &height, const int &width, uchar dataBitsInput, std::string sDir = "")
+SENSIANuc::SENSIANuc(std::string &sConfigName, const int &height, const int &width, uchar dataBitsInput, std::string sDir)
 {
     _height = height;
     _width = width;
@@ -135,7 +135,7 @@ void SENSIANuc::cleanAll()
 {
     initGain();
     initOffset();
-    initBadPix(); // To be deprecated in favor of Pixman
+   // initBadPix(); // To be deprecated in favor of Pixman
     clearBuffers();
 }
 
@@ -574,9 +574,9 @@ void SENSIANuc::setAdjustMatrixForcingNucValue(int iValue)
         return;
     }
 
-    std::string filePath = rawFiles[0];
+    std::string rawPath = rawFiles[0];
 
-    if(!readNucMat(filePath, Gain, 4))
+    if(!readNucMat(rawPath, Gain, 4))
     {   
         throw std::ios_base::failure("Could not read GainU.raw file.");
         initAdjustMatrix();

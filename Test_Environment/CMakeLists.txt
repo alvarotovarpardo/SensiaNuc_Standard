@@ -46,8 +46,6 @@ set(SOURCES
     ${FOLDER_DIR}/pixel_manager.cpp
 )
 
-message("Sources included: ${SOURCES}")
-
 # Añadir rutas de Conan para encontrar paquetes
 list(APPEND CMAKE_PREFIX_PATH "${CMAKE_BINARY_DIR}")
 
@@ -88,7 +86,8 @@ if(DEFINED LibRef)
 endif()
 
 include_directories(${FOLDER_DIR})
-add_executable(${PROJECT_NAME} src/main.cpp)
+# add_executable(${PROJECT_NAME} src/main.cpp ../SensiaNuc.cpp ../pixel_manager.cpp)
+add_executable(${PROJECT_NAME} ${SOURCES})
 
 target_include_directories(${PROJECT_NAME} PUBLIC ${CONAN_INCLUDE_DIRS} ${OpenCV_INCLUDE_DIRS})
 target_link_libraries(${PROJECT_NAME} PUBLIC ${CONAN_LIBS} ${OpenCV_LIBS} aravis::aravis)
