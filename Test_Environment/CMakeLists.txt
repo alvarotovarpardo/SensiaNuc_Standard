@@ -6,6 +6,7 @@ message(STATUS "Policy CMP0091 set NEW")
 if(EXISTS "${CMAKE_BINARY_DIR}/generators/conan_toolchain.cmake")
     include("${CMAKE_BINARY_DIR}/generators/conan_toolchain.cmake")
 endif()
+add_compile_options(-w)
 
 # Detectar el sistema operativo
 if(WIN32)
