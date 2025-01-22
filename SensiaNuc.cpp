@@ -126,7 +126,7 @@ void SENSIANuc::saveImageMBP(std::string sPatCalibration, int iNuc)
     std::string dirNuc = getDirNuc(sPatCalibration, iNuc);
     saveMat(dirNuc + "/GainU.raw", Gain, 4);
     saveMat(dirNuc + "/OffsetU.raw", Offset, 4);
-    saveMat(dirNuc + "/bad_pix.raw", mat_pixeles_malos, 2);
+    //saveMat(dirNuc + "/bad_pix.raw", mat_pixeles_malos, 2);
 }
 
 

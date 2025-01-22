@@ -67,7 +67,8 @@
         "xstring": "cpp",
         "xtree": "cpp",
         "xutility": "cpp",
-        "regex": "cpp"
+        "regex": "cpp",
+        "xthread": "cpp"
     },
     "cmake.sourceDirectory": "C:/CODE/SensiaNuc_STL/Test_Environment"
 }
